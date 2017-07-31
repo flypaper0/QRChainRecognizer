@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tju-KG-Suu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" customModule="QRChainRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L41-Pu-cTY">
+                                <rect key="frame" x="169" y="164" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tf4-f9-Fm7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5w-lX-XEq">
+                                <rect key="frame" x="151" y="294" width="72" height="30"/>
+                                <state key="normal" title="Recognize"/>
+                                <connections>
+                                    <action selector="recognizeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kj9-qi-Xtm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="L41-Pu-cTY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="NAX-py-23v"/>
+                            <constraint firstItem="L41-Pu-cTY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ot6-ij-bIf"/>
+                            <constraint firstItem="j5w-lX-XEq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SAB-ma-Fmi"/>
+                            <constraint firstItem="j5w-lX-XEq" firstAttribute="top" secondItem="L41-Pu-cTY" secondAttribute="bottom" constant="100" id="m8m-bs-Qun"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HfK-Wq-xk1">
+                        <barButtonItem key="backBarButtonItem" title=" " id="cV0-iY-ID0"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="enT-Il-RdF" kind="show" identifier="showSendViewController" id="guS-B4-yMY"/>
+                        <segue destination="k2Z-q5-cZT" kind="show" identifier="showRecognizeViewController" id="2em-wA-BV1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="136"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xpA-ZT-9VT">
+            <objects>
+                <navigationController id="Tju-KG-Suu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bIz-mJ-Zm1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="D0Q-ZR-b2R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hjl-Ut-c3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639" y="137"/>
+        </scene>
+        <!--Send-->
+        <scene sceneID="iYF-GM-3sq">
+            <objects>
+                <viewController title="Send" id="enT-Il-RdF" customClass="SendViewController" customModule="QRChainRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nYj-qP-Crn"/>
+                        <viewControllerLayoutGuide type="bottom" id="tMV-4g-4De"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i8d-Oy-6cq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhT-JF-PEA">
+                                <rect key="frame" x="169" y="318" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendPressed:" destination="enT-Il-RdF" eventType="touchUpInside" id="dGH-h8-j05"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HvD-So-Im5">
+                                <rect key="frame" x="0.0" y="143.5" width="375" height="380"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HvD-So-Im5" secondAttribute="height" multiplier="75:76" id="HdR-fe-cp1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HvD-So-Im5" firstAttribute="centerY" secondItem="i8d-Oy-6cq" secondAttribute="centerY" id="EiM-WR-f1Z"/>
+                            <constraint firstItem="HvD-So-Im5" firstAttribute="leading" secondItem="i8d-Oy-6cq" secondAttribute="leading" id="IIi-Rg-mVD"/>
+                            <constraint firstItem="PhT-JF-PEA" firstAttribute="centerY" secondItem="i8d-Oy-6cq" secondAttribute="centerY" id="Jhb-jO-WMq"/>
+                            <constraint firstItem="PhT-JF-PEA" firstAttribute="centerX" secondItem="i8d-Oy-6cq" secondAttribute="centerX" id="NUU-ai-zZ1"/>
+                            <constraint firstItem="HvD-So-Im5" firstAttribute="centerX" secondItem="i8d-Oy-6cq" secondAttribute="centerX" id="ewb-z4-jf7"/>
+                            <constraint firstAttribute="trailing" secondItem="HvD-So-Im5" secondAttribute="trailing" id="zFp-RL-lxU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="qrCodeImageView" destination="HvD-So-Im5" id="TrD-07-0M5"/>
+                        <outlet property="sendButton" destination="PhT-JF-PEA" id="B8P-ch-Yaj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNM-n5-Kte" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128.8" y="-145.27736131934034"/>
+        </scene>
+        <!--Recognize-->
+        <scene sceneID="Tyc-JZ-bDE">
+            <objects>
+                <viewController title="Recognize" id="k2Z-q5-cZT" customClass="RecognizeViewController" customModule="QRChainRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7s2-Ek-I6s"/>
+                        <viewControllerLayoutGuide type="bottom" id="GFp-t3-aZa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AzX-3j-Qct">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D5v-y0-0cC">
+                                <rect key="frame" x="0.0" y="64" width="375" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D5v-y0-0cC" firstAttribute="leading" secondItem="AzX-3j-Qct" secondAttribute="leading" id="UHc-LP-FAp"/>
+                            <constraint firstAttribute="trailing" secondItem="D5v-y0-0cC" secondAttribute="trailing" id="laH-CX-qnp"/>
+                            <constraint firstItem="D5v-y0-0cC" firstAttribute="top" secondItem="7s2-Ek-I6s" secondAttribute="bottom" id="mzR-Jw-EXr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="D5v-y0-0cC" id="rrA-f1-rra"/>
+                        <segue destination="OJd-7T-dDL" kind="show" identifier="showPaymentInfoViewController" id="gh9-to-mhM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lax-2c-VZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="519"/>
+        </scene>
+        <!--Payment Info View Controller-->
+        <scene sceneID="C2z-14-aoG">
+            <objects>
+                <viewController id="OJd-7T-dDL" customClass="PaymentInfoViewController" customModule="QRChainRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e0U-yo-hwX"/>
+                        <viewControllerLayoutGuide type="bottom" id="9QQ-Ds-bBd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xRU-7R-ZLN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PFY-b2-CM5">
+                                <rect key="frame" x="32" y="182" width="311" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="PaF-Pg-LZG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nickname: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGE-Na-x0Y">
+                                <rect key="frame" x="32" y="100" width="311" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment ID: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFM-OT-Q3I">
+                                <rect key="frame" x="32" y="141" width="311" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PFY-b2-CM5" firstAttribute="leading" secondItem="RFM-OT-Q3I" secondAttribute="leading" id="3Gu-pZ-YHT"/>
+                            <constraint firstItem="RFM-OT-Q3I" firstAttribute="top" secondItem="bGE-Na-x0Y" secondAttribute="bottom" constant="20" id="Cd3-iI-QNj"/>
+                            <constraint firstItem="RFM-OT-Q3I" firstAttribute="leading" secondItem="bGE-Na-x0Y" secondAttribute="leading" id="GuW-HM-Yvw"/>
+                            <constraint firstItem="bGE-Na-x0Y" firstAttribute="top" secondItem="e0U-yo-hwX" secondAttribute="bottom" constant="36" id="UwN-L1-g0C"/>
+                            <constraint firstItem="PFY-b2-CM5" firstAttribute="top" secondItem="RFM-OT-Q3I" secondAttribute="bottom" constant="20" id="fIN-fM-r4B"/>
+                            <constraint firstItem="bGE-Na-x0Y" firstAttribute="leading" secondItem="xRU-7R-ZLN" secondAttribute="leadingMargin" constant="16" id="fiQ-OC-24a"/>
+                            <constraint firstItem="RFM-OT-Q3I" firstAttribute="trailing" secondItem="bGE-Na-x0Y" secondAttribute="trailing" id="gq1-b2-W0v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bGE-Na-x0Y" secondAttribute="trailing" constant="16" id="ocm-AM-zV6"/>
+                            <constraint firstItem="PFY-b2-CM5" firstAttribute="trailing" secondItem="RFM-OT-Q3I" secondAttribute="trailing" id="rSR-7A-odP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="PFY-b2-CM5" id="0rV-AW-qEg"/>
+                        <outlet property="nicknameLabel" destination="bGE-Na-x0Y" id="1es-9c-6Z7"/>
+                        <outlet property="paymentIdLabel" destination="RFM-OT-Q3I" id="8NI-8V-cvv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TYQ-yh-y21" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928.8" y="518.59070464767615"/>
+        </scene>
+    </scenes>
+</document>
