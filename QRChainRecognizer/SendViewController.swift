@@ -36,7 +36,10 @@ extension SendViewController: QRChainServiceDelegate {
     
     func qrChainDidGenerate(qrCodes: [UIImage]) {
         sendButton.loadingIndicator(false)
-        qrCodeImageView.generateGif(from: qrCodes, interval: Constants.gifImageIterval)
+        
+        qrCodeImageView.animationImages = qrCodes
+        qrCodeImageView.animationDuration = TimeInterval(Double(qrCodes.count) * Constants.gifImageIterval)
+        qrCodeImageView.startAnimating()
     }
 
     

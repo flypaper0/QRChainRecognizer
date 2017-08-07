@@ -16,7 +16,6 @@ class PaymentInfoViewController: UIViewController {
     @IBOutlet weak var paymentIdLabel: UILabel!
     
     var paymentInfo: PaymentInfo!
-    var audioPlayer: AVAudioPlayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +23,6 @@ class PaymentInfoViewController: UIViewController {
         imageView.image = paymentInfo.avatar
         nicknameLabel.text = "Nickname: " + paymentInfo.nickname
         paymentIdLabel.text = "Payment ID: " + paymentInfo.paymentId
-        
-        let audioFilePath = Bundle.main.path(forResource: "lesh", ofType: "mp3")
-        let audioFileUrl = NSURL.fileURL(withPath: audioFilePath!)
-        audioPlayer = try! AVAudioPlayer(contentsOf: audioFileUrl)
-        audioPlayer.play()
     }
 
     override func didReceiveMemoryWarning() {

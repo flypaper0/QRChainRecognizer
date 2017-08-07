@@ -31,10 +31,10 @@ extension Data {
     func generateQRCodeImage() -> UIImage? {
         if let filter = CIFilter(name: "CIQRCodeGenerator") {
             filter.setValue(self, forKey: "inputMessage")
-            let transform = CGAffineTransform(scaleX: 4, y: 4)
+            let transform = CGAffineTransform(scaleX: 5, y: 5)
             
-            if let output = filter.outputImage?.applying(transform) {
-                return UIImage(ciImage: output)
+            if let output = filter.outputImage?.applying(transform), let cgImage = UIImage.convertCIImageToCGImage(output) {
+                return UIImage(cgImage: cgImage)
             }
         }
         return nil

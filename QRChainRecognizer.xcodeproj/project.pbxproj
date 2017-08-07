@@ -30,7 +30,6 @@
 		14912CE41F2E17220026775A /* QRChainRestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14912CE31F2E17220026775A /* QRChainRestoreService.swift */; };
 		14912CE61F2E3BEA0026775A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14912CE51F2E3BEA0026775A /* Constants.swift */; };
 		14912CEA1F2E441F0026775A /* PaymentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14912CE91F2E441F0026775A /* PaymentInfoViewController.swift */; };
-		14912CEC1F2E4B760026775A /* lesh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14912CEB1F2E4B760026775A /* lesh.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +58,6 @@
 		14912CE31F2E17220026775A /* QRChainRestoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRChainRestoreService.swift; sourceTree = "<group>"; };
 		14912CE51F2E3BEA0026775A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		14912CE91F2E441F0026775A /* PaymentInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentInfoViewController.swift; sourceTree = "<group>"; };
-		14912CEB1F2E4B760026775A /* lesh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = lesh.mp3; path = ../../../../Downloads/lesh.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +130,6 @@
 		1439749E1F2BAAF60068F516 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				14912CEB1F2E4B760026775A /* lesh.mp3 */,
 				143974901F2BAABF0068F516 /* Assets.xcassets */,
 				143974921F2BAABF0068F516 /* LaunchScreen.storyboard */,
 				143974951F2BAABF0068F516 /* Info.plist */,
@@ -278,7 +275,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				143974941F2BAABF0068F516 /* LaunchScreen.storyboard in Resources */,
-				14912CEC1F2E4B760026775A /* lesh.mp3 in Resources */,
 				143974911F2BAABF0068F516 /* Assets.xcassets in Resources */,
 				1439748F1F2BAABF0068F516 /* Main.storyboard in Resources */,
 			);

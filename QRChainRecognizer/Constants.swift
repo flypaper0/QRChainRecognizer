@@ -9,7 +9,7 @@
 import UIKit
 
 struct Constants {
-    static let chunkSize = 1200
-    static let gifImageIterval = 0.1
-    static let imageScale: CGFloat = 0.25
+    static let chunkSize = 1300
+    static let gifImageIterval = 0.3
+    static let imageScale: CGFloat = 0.4
 }
